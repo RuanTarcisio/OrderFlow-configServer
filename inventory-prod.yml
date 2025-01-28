@@ -13,20 +13,30 @@ spring:
         "globally_quoted_identifiers": "true"
       hibernate.format_sql: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
 
+server:
+  port: 0
 
-#server:
-#  port: 8766
-
-#eureka:
- # client:
-  #  service-url:
-   #   defaultZone: http://localhost:8761/eureka
-   # fetch-registry: true
-   # register-with-eureka: true
-  #instance:
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
 #    instance-id: ${spring.application.name}:${spring.application.instance-id:${random.value} }
-   # prefer-ip-address: true
+    prefer-ip-address: true
 
 info:
   app:
