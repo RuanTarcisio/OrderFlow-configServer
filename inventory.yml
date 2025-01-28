@@ -13,18 +13,6 @@ spring:
         "globally_quoted_identifiers": "true"
       hibernate.format_sql: true
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    shutdown:
-      enabled: true
-  info:
-    env:
-      enabled: true
-
 server:
   port: 0
 
