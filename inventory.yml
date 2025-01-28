@@ -28,7 +28,7 @@ management:
       enabled: true
 
 server:
-  port: 0
+  port: 8766
 
 #eureka:
  # client:
